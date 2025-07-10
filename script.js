@@ -109,6 +109,8 @@ const inputTransferAmount = document.querySelector(".form__input--amount");
 const inputLoanAmount = document.querySelector(".form__input--loan-amount");
 const inputCloseUsername = document.querySelector(".form__input--user");
 const inputClosePin = document.querySelector(".form__input--pin");
+const loginForm = document.querySelector(".login");
+const btnLogout = document.querySelector(".logout__btn");
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -268,7 +270,7 @@ const startLogOutTimer = function () {
   };
 
   //Set time to 5 minutes
-  let time = 120;
+  let time = 300;
 
   //Call the timer every second
   tick();
@@ -310,7 +312,8 @@ btnLogin.addEventListener("click", (e) => {
       currentAccount.owner.split(" ")[0]
     }`;
     containerApp.style.opacity = 100;
-
+    loginForm.classList.add("hidden");
+    btnLogout.classList.remove("hidden");
     const now = new Date();
     const options = {
       hour: "numeric",
@@ -345,6 +348,17 @@ btnLogin.addEventListener("click", (e) => {
     }
 
     timer = startLogOutTimer();
+  }
+});
+
+btnLogout.addEventListener("click", (e) => {
+  e.preventDefault();
+  labelWelcome.textContent = "Login to get started";
+  containerApp.style.opacity = 0;
+  loginForm.classList.remove("hidden");
+  btnLogout.classList.add("hidden");
+  if (timer) {
+    clearInterval(timer);
   }
 });
 

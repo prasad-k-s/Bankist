@@ -34,6 +34,7 @@
         />
         <button class="login__btn">&rarr;</button>
       </form>
+      <button class="logout__btn hidden">Logout</button>
     </nav>
 
     <main class="app">
@@ -66,13 +67,17 @@
 
       <!-- SUMMARY -->
       <div class="summary">
-        <p class="summary__label">In</p>
-        <p class="summary__value summary__value--in">0000€</p>
-        <p class="summary__label">Out</p>
-        <p class="summary__value summary__value--out">0000€</p>
-        <p class="summary__label">Interest</p>
-        <p class="summary__value summary__value--interest">0000€</p>
-        <button class="btn--sort">&downarrow; SORT</button>
+        <div class="container-1">
+          <p class="summary__label">In</p>
+          <p class="summary__value summary__value--in">0000€</p>
+          <p class="summary__label">Out</p>
+          <p class="summary__value summary__value--out">0000€</p>
+        </div>
+        <div class="container-2">
+          <p class="summary__label">Interest</p>
+          <p class="summary__value summary__value--interest">0000€</p>
+          <div class="btn--sort">SORT</div>
+        </div>
       </div>
 
       <!-- OPERATION: TRANSFERS -->

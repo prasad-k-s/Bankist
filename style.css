@@ -79,8 +79,7 @@ nav {
 .login__btn:focus,
 .btn--sort:hover,
 .btn--sort:focus {
-  outline: none;
-  color: #777;
+  opacity: 0.7;
 }
 
 /* MAIN */
@@ -96,12 +95,13 @@ nav {
   /* NOTE This creates the fade in/out anumation */
   opacity: 0;
   transition: all 1s;
+  padding-bottom: 10rem;
 }
 
 .balance {
   grid-column: 1 / span 2;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
@@ -109,7 +109,7 @@ nav {
 .balance__label {
   font-size: 2.2rem;
   font-weight: 500;
-  margin-bottom: -0.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .balance__date {
@@ -175,7 +175,12 @@ nav {
   padding: 0 0.3rem;
   margin-top: 1rem;
 }
-
+.container-1,
+.container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .summary__label {
   font-size: 1.2rem;
   font-weight: 500;
@@ -199,11 +204,14 @@ nav {
 
 .btn--sort {
   margin-left: auto;
-  border: none;
-  background: none;
   font-size: 1.3rem;
   font-weight: 500;
+  color: white;
+  background-color: #39b385;
   cursor: pointer;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  text-align: center;
 }
 
 /* OPERATIONS */
@@ -294,4 +302,124 @@ h2 {
 
 .timer {
   font-weight: 600;
+}
+
+.logout__btn {
+  border: none;
+  outline: none;
+  color: white;
+  background-color: red;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.logout__btn:hover {
+  opacity: 0.7;
+}
+.hidden {
+  display: none;
+}
+
+@media (max-width: 895px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 745px) {
+  .movements {
+    grid-row: 2 / span 3;
+    grid-column: 1/-1;
+  }
+  .btn--sort {
+    margin: 0;
+  }
+  .summary {
+    grid-row: 5 / 6;
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+  .operation--transfer {
+    max-width: 60%;
+    grid-column: 1/-1;
+    align-self: center;
+    justify-self: center;
+  }
+  .operation--loan {
+    max-width: 60%;
+    align-self: center;
+    justify-self: center;
+    grid-column: 1/-1;
+  }
+  .operation--close {
+    max-width: 60%;
+    align-self: center;
+    justify-self: center;
+    grid-column: 1/-1;
+  }
+  .logout-timer {
+    grid-column: 1/-1;
+    align-self: center;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .operation--transfer {
+    max-width: 80%;
+  }
+  .operation--loan {
+    max-width: 80%;
+  }
+  .operation--close {
+    max-width: 80%;
+  }
+}
+@media (max-width: 540px) {
+  nav {
+    gap: 2rem;
+    flex-direction: column;
+  }
+}
+@media (max-width: 470px) {
+  .summary {
+    gap: 3rem;
+  }
+  .container-1,
+  .container-2 {
+    flex-direction: column;
+  }
+  .summary__label {
+    margin-top: 2rem;
+  }
+  .btn--sort {
+    margin-top: 3rem;
+  }
+  .balance__value {
+    font-size: 3rem;
+  }
+  .balance__label {
+    font-size: 2rem;
+  }
+  .summary__label {
+    margin-bottom: 0.6rem;
+  }
+}
+@media (max-width: 400px) {
+  .balance__date {
+    max-width: 80%;
+  }
+}
+@media (max-width: 350px) {
+  .operation--transfer {
+    max-width: 100%;
+  }
+  .operation--loan {
+    max-width: 100%;
+  }
+  .operation--close {
+    max-width: 100%;
+  }
+
+  .balance__value {
+    font-size: 2.5rem;
+  }
 }
