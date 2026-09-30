@@ -6,7 +6,7 @@ A minimalist online banking app built with vanilla JavaScript. Log in to a demo 
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-**🔗 Live demo:** [prasad-bankist.netlify.app](#)
+**🔗 Live demo:** [https://prasad-bankist.netlify.app/](#)
 
 ---
 
